@@ -381,7 +381,7 @@ const loadCostume = function (md5ext, costume, runtime, optVersion) {
     const AssetType = runtime.storage.AssetType;
     const assetType = (ext === 'svg') ? AssetType.ImageVector : AssetType.ImageBitmap;
 
-    const costumePromise = runtime.storage.load(assetType, md5, ext);
+    const costumePromise = runtime.storage.load(assetType, md5, ext, costume.rawURL);
 
     let textLayerPromise;
     if (costume.textLayerMD5) {
