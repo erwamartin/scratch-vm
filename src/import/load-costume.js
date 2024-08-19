@@ -357,7 +357,7 @@ const loadCostumeFromAsset = function (costume, runtime, optVersion) {
  * @returns {?Promise} - a promise which will resolve after skinId is set, or null on error.
  */
 const loadCostume = function (md5ext, costume, runtime, optVersion) {
-    const idParts = StringUtil.splitFirst(md5ext, '.');
+    const idParts = StringUtil.splitFirst(md5ext || costume.rawURL, '.');
     const md5 = idParts[0];
     const ext = idParts[1].toLowerCase();
     costume.dataFormat = ext;
