@@ -884,7 +884,8 @@ const parseScratchAssets = function (object, runtime, zip) {
             name: costumeSource.name,
             bitmapResolution: costumeSource.bitmapResolution,
             rotationCenterX: costumeSource.rotationCenterX,
-            rotationCenterY: costumeSource.rotationCenterY
+            rotationCenterY: costumeSource.rotationCenterY,
+            rawURL: costumeSource.rawURL,
         };
         const dataFormat =
             costumeSource.dataFormat ||
